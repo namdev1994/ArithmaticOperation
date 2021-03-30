@@ -23,3 +23,23 @@ do
 done
 #TO PRINT
 echo "${array[@]}"
+
+function descendingOrderSort()
+{
+	for(( index=0; index<${#array[@]}; index ++ ))
+	do
+		for(( indexOne=0; indexOne<${#array[@]}-1; indexOne ++ ))
+		do
+			if [ ${array[indexOne+1]} > ${array[indexOne]} ]
+			then
+				temp=${array[indexOne]}
+				array[indexOne]=${array[indexOne+1]}
+				array[indexOne+1]=$temp
+			fi
+		done
+	done
+	echo "To data descending order" ${array[@]}
+}
+
+#TO FUNCTION CALL FOR SORTING IN DECENDING ORDER
+descendingOrderSort ${array[@]}
