@@ -5,3 +5,5 @@ result=$(($fristInput+$secondInput*$thirdInput))
 echo $result
 result1=$(($fristInput*$secondInput+$thirdInput))
 echo $result1
+result2=$(($thirdInput+$fristInput/$secondInput))
+echo $result2
